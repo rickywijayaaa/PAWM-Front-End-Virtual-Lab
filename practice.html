@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Practice - Drag and Drop</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="navbar">
+                <div class="logo"><a href="#">LetsCoding</a></div>
+                <div class="nav-item"><a href="homepage.html">Home</a></div>
+                <div class="nav-item"><a href="project.html">Project</a></div>
+                <div class="nav-item"><a href="course.html">Courses</a></div>
+                <div class="nav-item"><a href="practice.html">Practice</a></div>
+                <div class="nav-item sign-in"><a href="#">Profile</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Python Basic Practice</h1>
+        </div>
+
+        <div class="drag-container">
+            <!-- Left Section with Question Numbers -->
+            <div class="left-section">
+                <h2>Question Numbers</h2>
+                <ul class="question-list">
+                    <li class="question-item active">1</li>
+                    <li class="question-item">2</li>
+                    <li class="question-item">3</li>
+                    <li class="question-item">4</li>
+                    <li class="question-item">5</li>
+                    <li class="question-item">6</li>
+                    <li class="question-item">7</li>
+                    <li class="question-item">8</li>
+                    <li class="question-item">9</li>
+                    <li class="question-item">10</li>
+                </ul>                
+            </div>
+
+            <!-- Right Section with Drag and Drop Code Blocks -->
+            <div class="right-section">
+                <h2>Arrange the code with correct order</h2>
+                <div class="code-blocks" id="codeBlocks">
+                    <div class="block" draggable="true" id="line1"> else: </div>
+                    <div class="block" draggable="true" id="line2">    if (x % 2 == 0) : </div>
+                    <div class="block" draggable="true" id="line3">def evenOdd():</div>
+                    <div class="block" draggable="true" id="line4">    print "even"</div>
+                    <div class="block" draggable="true" id="line5">    print "odd"</div>
+                </div>
+
+                <div class="drop-zone" id="dropzone">
+                    <p>Drop the code blocks here in the correct order</p>
+                </div>
+
+                <button class="submit-btn" onclick="checkOrder()">Submit</button>
+                <div id="feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

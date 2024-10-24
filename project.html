@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="navbar">
+                <div class="logo"><a href="#">LetsCoding</a></div>
+                <div class="nav-item"><a href="homepage.html">Home</a></div>
+                <div class="nav-item"><a href="project.html">Projects</a></div>
+                <div class="nav-item"><a href="course.html">Courses</a></div>
+                <div class="nav-item"><a href="practice.html">Practice</a></div>
+                <div class="nav-item sign-in"><a href="#">Profile</a></div>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Left Section for User Projects -->
+            <section class="user-projects">
+                <h3>Your Projects</h3>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h4>Project 1: Basic Strings</h4>
+                        <p>Due: 2024-11-10</p>
+                        <p>Status: <span class="status submitted">Submitted</span></p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Project 2: Tugas Besar</h4>
+                        <p>Due: 2024-11-20</p>
+                        <p>Status: <span class="status not-submitted">Unsubmitted</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Section for Project Submission Form -->
+            <section class="project-details">
+                <h3>Submit Your <span class="highlight">Project</span></h3>
+                <form class="project-form" id="projectForm">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" name="projectName" placeholder="Enter your project name..." required>
+
+                    <label for="projectDescription">Project Description</label>
+                    <textarea id="projectDescription" name="projectDescription" rows="5" placeholder="Enter a description for your project..." required></textarea>
+
+                    <label for="dueDate">Submission Date</label>
+                    <input type="date" id="dueDate" name="dueDate" required>
+
+                    <label for="fileUpload">Upload Project Files</label>
+                    <input type="file" id="fileUpload" name="fileUpload">
+
+                    <button type="submit" class="submit-btn">Submit Project</button>
+                </form>
+
+                <!-- Success/Failure message section -->
+                <div id="submissionMessage" class="submission-message"></div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+    </div>
+
+    <script>
+        // Get form and message elements
+        const projectForm = document.getElementById('projectForm');
+        const submissionMessage = document.getElementById('submissionMessage');
+
+        // Function to show the message below the form
+        function showSubmissionMessage(message, isSuccess) {
+            submissionMessage.textContent = message;
+            submissionMessage.style.color = isSuccess ? '#8257E5' : '#FF4C4C'; // Green for success, red for failure
+        }
+
+        // Form submission event listener
+        projectForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission behavior
+
+            // Simulate form submission success or failure (you can replace this with actual logic)
+            const isSuccess = Math.random() > 0.3; // Randomly choose success or failure for demo
+
+            if (isSuccess) {
+                showSubmissionMessage('Project submitted successfully!', true);
+            } else {
+                showSubmissionMessage('Failed to submit the project. Please try again.', false);
+            }
+        });
+    </script>
+</body>
+</html>
