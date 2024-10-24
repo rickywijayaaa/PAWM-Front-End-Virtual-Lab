@@ -1,425 +1,1148 @@
-/* Reset and global settings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #FDF8EE;
-  scroll-behavior: smooth; /* Smooth scrolling experience */
-}
-
-/* Main container */
-.main-container {
-  width: 100%;
-  position: relative;
-  background-color: white;
-  overflow: visible;
-}
-
-/* Header */
-.header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: #4D2C5E;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background-color: #4D2C5E;
-  color: white;
-  z-index: 1000; /* Ensures it's on top of other elements */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow to enhance visibility */
-}
-
-/* Logo */
-.logo a {
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-
-/* Navigation items */
-.nav-item a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  margin-left: 30px;
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-.nav-item a:hover {
-  color: #FF7426;
-}
-
-/* Sign-in button */
-.sign-in a {
-  padding: 8px 20px;
-  border: 2px solid white;
-  border-radius: 25px;
-  transition: all 0.3s ease; /* Smooth hover transition */
-}
-
-.sign-in a:hover {
-  background-color: white;
-  color: #4D2C5E;
-}
-
-/* Content styling */
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 70px;
-  color: #050C26;
-}
-
-.content-left {
-  flex: 1;
-  max-width: 50%;
-  margin-left: 10px;
-  
-}
-
-
-.content-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Text styling */
-.content h1 {
-  font-size: 64px;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-/* Text styling */
-.content h2 {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-
-
-.highlight {
-  color: #FF7426;
-}
-
-/* Search bar */
-.search-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  
-}
-
-.search-bar input {
-  width: 400px;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 50px;
-  border: 1px solid #0F335E;
-  margin-left: 10px;
-  
-}
-
-.search-bar button {
-  padding: 10px 20px;
-  margin-left: 20px;
-  background-color: #4D2C5E;
-  color: white;
-  font-size: 20px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-/* Image styling */
-.main-image {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Footer */
-.footer {
-  width: 100%;
-  height: 100px;
-  background-color: #4D2C5E;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  padding: 30px 0;
-}
-
-
-/* Topics Section */
-.topics-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 50px 0; /* Adjusted margin */
-  padding: 0 80px; /* Increase padding to move away from left and right */
-}
-
-.topic {
-  flex: 1;
-  border: 2px solid #4D2C5E;
-  padding: 15px; /* Reduce padding inside the topic box */
-  margin: 0 15px; /* Increase space between topic boxes */
-  border-radius: 10px;
-  text-align: center;
-  background-color: #FDF8EE;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Minimize shadow effect */
-  transition: transform 0.3s ease;
-}
-
-.topic:hover {
-  transform: translateY(-5px); /* Slightly reduce the hover effect */
-}
-
-.topic img {
-  width: 50%; /* Further reduce the image size */
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px; /* Reduce space between image and content */
-}
-
-.topic h2 {
-  color: #4D2C5E;
-  font-size: 20px; /* Decrease font size */
-  font-weight: bolder;
-  margin-bottom: 8px; /* Reduce space below the heading */
-}
-
-.topic p {
-  font-size: 14px; /* Decrease text size */
-  color: #050C26;
-  margin-bottom: 20px; /* Reduce space between content and button */
-}
-
-/* Course Detail Button */
-.course-btn {
-  display: inline-block;
-  background-color: #FF7426;
-  font-weight: bold;
-  color: white;
-  padding: 12px 20px; /* Reduce button size */
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 15px; /* Decrease font size */
-  transition: background-color 0.3s ease;
-  margin-top: 15px; /* Reduce space above the button */
-}
-
-.course-btn:hover {
-  background-color: #e5671e; /* Darken the button on hover */
-}
-
-/* General Reset and Global Settings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #FDF8EE;
-}
-
-/* Dashboard Container */
-.dashboard-container {
-  display: flex;
-  height: 100vh;
-  background-color: #F0F0F5;
-}
-
-/* Sidebar Section */
-.sidebar {
-  background-color: #8257E5;
-  width: 250px;
-  padding: 20px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.sidebar-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.sidebar-icon {
-  width: 60px;
-  height: 60px;
-}
-
-.sidebar-nav ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.sidebar-nav .nav-item {
-  margin-bottom: 20px;
-}
-
-.sidebar-nav .nav-item a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-}
-
-.sidebar-nav .nav-item.active a {
-  font-weight: bold;
-}
-
-.sidebar-nav .nav-item:hover a {
-  color: #FF7426;
-}
-
-/* Main Content Section */
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 80px; /* Original padding for all sides */
-  padding-bottom: 160px; /* Increased padding at the bottom */
-  background-color: white;
-}
-
-
-/* Left Side: User Projects */
-.user-projects {
-  flex: 1; /* 1/3 of the space */
-  background-color: #FDF8EE;
-  padding: 20px;
-  border-radius: 10px;
-  margin-right: 20px;
-  border: 2px solid #4D2C5E; /* Added border with color #4D2C5E */
-  border-radius: 15px; /* Optional: rounded corners */
-  box-shadow: 0px 10px 20px rgba(77, 44, 94, 0.2); /* Added shadow with color #4D2C5E at 20% opacity */
-
-}
-
-.user-projects h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.project-list {
-  margin-top: 20px;
-}
-
-.project-item {
-  background-color: white;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #CCC;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.project-item h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.status {
-  font-weight: bold;
-}
-
-.status.not-submitted {
-  color: red;
-}
-
-.status.submitted {
-  color: green;
-}
-
-/* Right Side: Project Submission Form */
-.project-details {
-  flex: 2; /* 2/3 of the space */
-  background-color: #FDF8EE;
-  padding: 20px;
-  border-radius: 10px;
-  margin-left: 20px;
-  font-family: 'Poppins', sans-serif;
-  border: 2px solid #4D2C5E; /* Added border with color #4D2C5E */
-  border-radius: 15px; /* Optional: rounded corners */
-  box-shadow: 0px 10px 20px rgba(77, 44, 94, 0.2); /* Added shadow with color #4D2C5E at 20% opacity */
-
-}
-
-
-.project-details h3 {
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.project-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.project-form input,
-.project-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #CCC;
-}
-
-.submit-btn {
-  padding: 10px 20px;
-  background-color: #FF7426;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.submit-btn:hover {
-  background-color: #e5671e;
-}
-
-/* Submission Message */
-.submission-message {
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Design for smaller screens */
+  /* Reset and global settings */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FDF8EE;
+    scroll-behavior: smooth; /* Smooth scrolling experience */
+  }
+
+  /* Main container */
+  .main-container {
+    width: 100%;
+    position: relative;
+    background-color: white;
+    overflow: visible;
+  }
+
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #4D2C5E;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #4D2C5E;
+    color: white;
+    z-index: 1000; /* Ensures it's on top of other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow to enhance visibility */
+  }
+
+  /* Logo */
+  .logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Navigation items */
+  .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 30px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+
+  .nav-item a:hover {
+    color: #FF7426;
+  }
+
+  /* Sign-in button */
+  .sign-in a {
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease; /* Smooth hover transition */
+  }
+
+  .sign-in a:hover {
+    background-color: white;
+    color: #4D2C5E;
+  }
+
+  /* Content styling */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    color: #050C26;
+  }
+
+  .content-left {
+    flex: 1;
+    max-width: 50%;
+    margin-left: 10px;
+    
+  }
+
+
+  .content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Text styling */
+  .content h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  /* Text styling */
+  .content h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+
+
+  .highlight {
+    color: #FF7426;
+  }
+
+  /* Search bar */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+  }
+
+  .search-bar input {
+    width: 400px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 1px solid #0F335E;
+    margin-left: 10px;
+    
+  }
+
+  .search-bar button {
+    padding: 10px 20px;
+    margin-left: 20px;
+    background-color: #4D2C5E;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  /* Image styling */
+  .main-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer {
+    width: 100%;
+    height: 100px;
+    background-color: #4D2C5E;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 30px 0;
+  }
+
+
+  /* Topics Section */
+  .topics-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 0; /* Adjusted margin */
+    padding: 0 80px; /* Increase padding to move away from left and right */
+  }
+
+  .topic {
+    flex: 1;
+    border: 2px solid #4D2C5E;
+    padding: 15px; /* Reduce padding inside the topic box */
+    margin: 0 15px; /* Increase space between topic boxes */
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FDF8EE;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Minimize shadow effect */
+    transition: transform 0.3s ease;
+  }
+
+  .topic:hover {
+    transform: translateY(-5px); /* Slightly reduce the hover effect */
+  }
+
+  .topic img {
+    width: 50%; /* Further reduce the image size */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Reduce space between image and content */
+  }
+
+  .topic h2 {
+    color: #4D2C5E;
+    font-size: 20px; /* Decrease font size */
+    font-weight: bolder;
+    margin-bottom: 8px; /* Reduce space below the heading */
+  }
+
+  .topic p {
+    font-size: 14px; /* Decrease text size */
+    color: #050C26;
+    margin-bottom: 20px; /* Reduce space between content and button */
+  }
+
+  /* Course Detail Button */
+  .course-btn {
+    display: inline-block;
+    background-color: #FF7426;
+    font-weight: bold;
+    color: white;
+    padding: 12px 20px; /* Reduce button size */
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 15px; /* Decrease font size */
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Reduce space above the button */
+  }
+
+  .course-btn:hover {
+    background-color: #e5671e; /* Darken the button on hover */
+  }
+
+  /* General Reset and Global Settings */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FDF8EE;
+  }
+
+  /* Dashboard Container */
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #F0F0F5;
+  }
+
+  /* Sidebar Section */
+  .sidebar {
+    background-color: #8257E5;
+    width: 250px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sidebar-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .sidebar-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sidebar-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .sidebar-nav .nav-item {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-nav .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar-nav .nav-item.active a {
+    font-weight: bold;
+  }
+
+  .sidebar-nav .nav-item:hover a {
+    color: #FF7426;
+  }
+
+  /* Main Content Section */
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px; /* Original padding for all sides */
+    padding-bottom: 160px; /* Increased padding at the bottom */
+    background-color: white;
+  }
+
+
+  /* Left Side: User Projects */
+  .user-projects {
+    flex: 1; /* 1/3 of the space */
+    background-color: #FDF8EE;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #4D2C5E; /* Added border with color #4D2C5E */
+    border-radius: 15px; /* Optional: rounded corners */
+    box-shadow: 0px 10px 20px rgba(77, 44, 94, 0.2); /* Added shadow with color #4D2C5E at 20% opacity */
+
+  }
+
+  .user-projects h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .project-list {
+    margin-top: 20px;
+  }
+
+  .project-item {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .project-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .status {
+    font-weight: bold;
+  }
+
+  .status.not-submitted {
+    color: red;
+  }
+
+  .status.submitted {
+    color: green;
+  }
+
+  /* Right Side: Project Submission Form */
+  .project-details {
+    flex: 2; /* 2/3 of the space */
+    background-color: #FDF8EE;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #4D2C5E; /* Added border with color #4D2C5E */
+    border-radius: 15px; /* Optional: rounded corners */
+    box-shadow: 0px 10px 20px rgba(77, 44, 94, 0.2); /* Added shadow with color #4D2C5E at 20% opacity */
+
+  }
+
+
+  .project-details h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .project-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .project-form input,
+  .project-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #CCC;
+  }
+
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #FF7426;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .submit-btn:hover {
+    background-color: #e5671e;
+  }
+
+  /* Submission Message */
+  .submission-message {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+
+
+
+  /* Motivational Section */
+  .motivational-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FDF8EE;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px 0;
+  }
+
+  .motivational-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  .motivational-left {
+    flex: 1;
+  }
+
+  .motivational-right {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .motivation-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .motivational-right h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bolder;
+  }
+
+  .motivational-right .feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  /* Feature Icon with background color */
+  .feature-icon-container {
+    background-color: #4D2C5E; /* Dark background */
+    padding: 10px; /* Space around the icon */
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-text h3 {
+    font-size: 20px;
+    margin: 0;
+    margin-left: 10px;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  }
+
+  .feature-text p {
+    margin: 5px 0 0;
+    margin-left: 10px;
+    color: #666;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  }
+
+
+
+
+
+
+  /* Testimonial Wrapper */
+  .testimonial-wrapper {
+    position: relative; /* Relative positioning for the arrow */
+  }
+
+  /* Arrow Image Styling */
+  .panah-image {
+    position: absolute;
+    left: 50px; /* Position the arrow to the left */
+    top: 80%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 100px; /* Adjust width of the arrow */
+    height: auto;
+    z-index: 1; /* Ensure it sits above the background */
+  } 
+
+  /* Bulan Image Styling */
+  .bulan-image {
+    position: absolute;
+    right: 50px; /* Position the 'bulan' image to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px; /* Adjust the size of the image */
+    height: auto;
+    z-index: 1;
+  }
+
+  /* Testimonial Section */
+  .testimonial-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+  }
+
+  .testimonial-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #050C26;
+  }
+
+  .testimonial-section p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+  }
+
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .testimonial {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+  }
+
+  .testimonial p {
+    font-style: roboto;
+    color: #acacac;
+    margin-bottom: 20px;
+  }
+
+  .student-info {
+    display: flex;
+    align-items: center; /* Align image and text vertically in the center */
+    gap: 15px; /* Space between the image and the text */
+  }
+
+  .student-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make the image circular */
+  }
+
+  .student-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #050C26;
+    margin: 0; /* Remove default margin */
+  }
+
+  .student-info span {
+    font-size: 14px;
+    color: #777;
+    margin: 0; /* Remove default margin */
+    display: block;
+  }
+
+  /* Pagination Dots */
+  .pagination {
+    margin-top: 20px;
+  }
+
+  .pagination .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .pagination .dot.active {
+    background-color: #4D2C5E;
+  }
+
+  .pagination .dot:hover {
+    background-color: #4D2C5E;
+  }
+
+  /* Subscription Section Styling */
+  .subscription-section {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #4D2C5E;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1; /* Ensure the subscription section is above */
+    margin-bottom: 40px; /* Add margin to avoid overlap with the next section */
+  }
+
+  .subscription-bg {
+    width: 100%;
+    height: 300px;
+    background: #4D2C5E;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+
+    margin: 0 20px;
+    left: 0;
+  }
+
+  .subscription-text {
+    width: 400px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  .left-circle {
+    left: -25px;
+    top: -45px;
+  }
+
+  .right-circle {
+    left: calc(100% - 25px);
+    top: -50px;
+    transform: rotate(90deg);
+  }
+
+  .small-left-circle {
+    left: 10px;
+    top: -80px;
+  }
+
+  .small-right-circle {
+    left: calc(100% - 10px);
+    top: -12px;
+    transform: rotate(90deg);
+  }
+
+  /* Content Inside the Subscription Section */
+  /* Content Inside the Subscription Section */
+  .subscription-content {
+    width: 100%;
+    max-width: 450px;  /* Limit the maximum width for content */
+    margin: 0 20px;  /* Add margins on left and right */
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+
+  .subscription-title {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 44px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .subscription-input {
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  .email-input {
+    width: 100%;
+    height: 60px;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0 30px;
+    font-size: 16px;
+    color: #ACACAC;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .send-btn {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 150px;
+    height: 50px;
+    background: #FF7426;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+  }
+
+  .send-btn:hover {
+    background-color: #e5671e;
+  }
+
+  /* Ensure that sections following the subscription have enough margin */
+  .content {
+    margin-top: 50px; /* Adjust margin to avoid overlap */
+  }
+
+
+  /* Drag and Drop Practice Page */
+
+  /* Container for Drag-and-Drop Practice */
+  .drag-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+  }
+
+  /* Left Section with Question Numbers */
+  .left-section {
+    flex: 1;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .left-section h2 {
+    text-align: center;
+    color: #4D2C5E;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Question List Styling */
+  .question-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .question-item {
+    padding: 12px 20px;
+    margin: 8px;
+    background-color: #4D2C5E;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .question-item:hover {
+    background-color: #FF7426;
+    transform: translateY(-4px);
+  }
+
+  /* Active state for the current question */
+  .question-item.active {
+    background-color: #ED9231;
+  }
+
+  /* Right Section with Code Blocks */
+  .right-section {
+    flex: 2;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .right-section h2{
+    text-align: center;
+    color: #4D2C5E;
+    font-size: 24px;
+  }
+
+  .code-blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+
+  .block {
+    width: 200px;
+    padding: 15px;
+    border: 2px solid #4D2C5E;
+    margin: 10px;
+    background-color: #FDF8EE;
+    cursor: grab;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .block:hover {
+    background-color: #ED9231;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .drop-zone {
+    width: 100%;
+    border: 2px dashed #4D2C5E;
+    min-height: 200px;
+    margin: 20px 0;
+    background-color: #F0F0F5;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .drop-zone p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4D2C5E;
+  }
+
+  .submit-btn {
+    padding: 12px 25px;
+    background-color: #FF7426;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #e5671e;
+  }
+
+  .feedback {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4D2C5E;
+    margin-top: 20px;
+  }
+
+
+
+  /* Course Page Styles */
+
+  /* Course Container */
+  .course-container {
+    width: 80%;
+    margin: 40px auto; /* Add margin to top/bottom and auto for centering left/right */
+    background-color: #FDF8EE; /* Matches the main background */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #4D2C5E; /* Added border with color #4D2C5E */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  /* Course Header */
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .course-header h1 {
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    color: #4D2C5E;
+  }
+
+  .badge-popular {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    border-radius: 15px;
+  }
+
+  /* Video Section */
+  /* Video Section */
+  .video-section {
+    position: relative;
+    margin-top: 30px; /* Add more space at the top */
+    text-align: center; /* Center-align the video section */
+  }
+
+  .video-section img {
+    width: 100%; /* Set width to full for larger screens */
+    max-width: 800px; /* Limit the maximum width */
+    border-radius: 12px; /* Slightly round corners */
+    margin: 0 auto;
+    filter: brightness(0.7); /* Adjust brightness for softer appearance */
+    transition: filter 0.3s ease;
+  }
+
+  .video-section img:hover {
+    filter: brightness(0.85); /* Lighten slightly on hover */
+  }
+
+  .video-section .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px; /* Increase size for clarity */
+    color: #FF7426;
+    background-color: rgba(255, 255, 255, 0.85); /* Softer background */
+    padding: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .video-section .play-btn:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+    transform: scale(1.1); /* Scale up slightly for interaction feedback */
+  }
+
+  /* Course Info Section */
+  .course-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    padding: 0 20px; /* Add padding to ensure text doesn't touch edges */
+    flex-wrap: wrap; /* Ensure layout adapts to smaller screens */
+  }
+
+  .course-info .details {
+    flex: 1;
+    margin-right: 20px; /* Space between details and price/enroll section */
+  }
+
+  .course-info .details ul li {
+    margin-bottom: 12px; /* Increase spacing for readability */
+    font-size: 18px; /* Increase font size */
+  }
+
+  .price-enroll {
+    text-align: center;
+  }
+
+  .price-enroll .price-tag {
+    background-color: #ED6A5A; /* Softer red tone */
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 12px; /* Less rounded for a modern look */
+  }
+
+  .price-enroll .enroll-btn {
+    background-color: #4D2C5E;
+    color: white;
+    padding: 12px 25px; /* Increase padding */
+    font-size: 18px;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .price-enroll .enroll-btn:hover {
+    background-color: #FF7426;
+  }
+
+  /* Lessons Section */
+  .lessons-section {
+    margin-top: 40px;
+    padding: 0 20px; /* Add padding for consistent spacing */
+  }
+
+  .lessons-section h3 {
+    font-size: 24px;
+    color: #4D2C5E;
+  }
+
+  .lesson-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #FDF8EE; /* Match page background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .lesson-item:hover {
+    background-color: #F0F0F5; /* Light background change on hover */
+    transform: translateY(-5px);
+  }
+
+  /* Review Section */
+  .review-section {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+
+  .review-section h3 {
+    font-size: 24px;
+    color: #4D2C5E;
+  }
+
+  .review-section textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #4D2C5E; /* Bolder border for focus */
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+
+  .review-section textarea:focus {
+    border-color: #FF7426; /* Change border color on focus */
+  }
+
+  .review-section .write-review-btn {
+    background-color: #4D2C5E;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .review-section .write-review-btn:hover {
+    background-color: #FF7426;
+  }
+
+
+
+
+  /* Profile Section Styling */
+  .profile-card {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #FDF8EE; /* Changed background for better contrast */
+    border-radius: 15px;
+    border-color: #4D2C5E;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Added a deeper shadow for more prominence */
+    margin: 40px auto;
+    width: 50%; /* Reduced width for a tighter profile card */
+  }
+
+  .profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensures the image fits well in the circle */
+  }
+
+  .profile-details p {
+    font-size: 18px;
+    color: #4D2C5E;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+
+  .profile-details p strong {
+    font-weight: 700;
+    color: #4D2C5E;
+  }
+
+  .profile-details img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  /* Profile title styling */
+  .profile-card h1 {
+    font-size: 36px;
+    color: #4D2C5E;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+
+
+  /* Responsive Design for smaller screens */
 @media screen and (max-width: 768px) {
+  /* Dashboard adjustments */
   .dashboard-container {
     flex-direction: column;
   }
@@ -436,94 +1159,11 @@ body {
   .search-input {
     width: 100%;
   }
-}
 
-/* Motivational Section */
-.motivational-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #FDF8EE;
-  padding: 40px;
-  border-radius: 10px;
-  margin: 40px 0;
-}
-
-.motivational-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-weight: bold;
-}
-
-.motivational-left {
-  flex: 1;
-}
-
-.motivational-right {
-  flex: 1;
-  padding-left: 20px;
-}
-
-.motivation-image {
-  width: 100%;
-  max-width: 300px;
-}
-
-.motivational-right h1 {
-  font-size: 50px;
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: bolder;
-}
-
-.motivational-right .feature {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-/* Feature Icon with background color */
-.feature-icon-container {
-  background-color: #4D2C5E; /* Dark background */
-  padding: 10px; /* Space around the icon */
-  border-radius: 15px; /* Rounded corners */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 70px;
-}
-
-.feature-icon {
-  width: 50px;
-  height: 50px;
-}
-
-.feature-text h3 {
-  font-size: 20px;
-  margin: 0;
-  margin-left: 10px;
-  color: #333;
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-}
-
-.feature-text p {
-  margin: 5px 0 0;
-  margin-left: 10px;
-  color: #666;
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-}
-
-
-
-
-/* Responsive for smaller screens */
-@media screen and (max-width: 768px) {
+  /* Topics Section adjustments */
   .topics-section {
     flex-direction: column;
-    padding: 0 30px; /* Adjust for smaller screens */
+    padding: 0 30px;
   }
 
   .topic {
@@ -531,10 +1171,120 @@ body {
   }
 
   .topic img {
-    width: 70%; /* Slightly larger for smaller screens */
+    width: 70%;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .nav-item {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .nav-item a {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  /* Content adjustments */
+  .content {
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .search-bar input {
+    width: 250px;
+    font-size: 16px;
+  }
+
+  .search-bar button {
+    font-size: 16px;
+  }
+
+  .sign-in a {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+
+  /* Testimonial adjustments */
+  .testimonial-section {
+    padding: 30px 15px;
+  }
+
+  .testimonial {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* Motivational Section adjustments */
+  .motivational-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .motivation-image {
+    max-width: 250px;
+  }
+
+  .feature {
+    justify-content: center;
+  }
+
+  /* Course Page adjustments */
+  .course-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .course-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .enroll-btn {
+    margin-top: 15px;
+  }
+
+  /* Profile adjustments */
+  .profile-card {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .profile-pic {
+    margin-bottom: 20px;
+  }
+
+  .profile-details p {
+    font-size: 16px;
+  }
+
+  /* Drag and Drop adjustments */
+  .drag-container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    margin-top: 20px;
   }
 }
-
 
 /* Mobile devices (480px and below) */
 @media screen and (max-width: 480px) {
@@ -579,621 +1329,29 @@ body {
     padding: 6px 15px;
     font-size: 14px;
   }
-}
 
-
-
-/* Testimonial Wrapper */
-.testimonial-wrapper {
-  position: relative; /* Relative positioning for the arrow */
-}
-
-/* Arrow Image Styling */
-.panah-image {
-  position: absolute;
-  left: 50px; /* Position the arrow to the left */
-  top: 80%;
-  transform: translateY(-50%); /* Center vertically */
-  width: 100px; /* Adjust width of the arrow */
-  height: auto;
-  z-index: 1; /* Ensure it sits above the background */
-} 
-
-/* Bulan Image Styling */
-.bulan-image {
-  position: absolute;
-  right: 50px; /* Position the 'bulan' image to the right */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120px; /* Adjust the size of the image */
-  height: auto;
-  z-index: 1;
-}
-
-/* Testimonial Section */
-.testimonial-section {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: white;
-}
-
-.testimonial-section h2 {
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  color: #050C26;
-}
-
-.testimonial-section p {
-  font-size: 16px;
-  color: #777;
-  margin-bottom: 40px;
-}
-
-.testimonials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.testimonial {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px;
-  text-align: left;
-}
-
-.testimonial p {
-  font-style: roboto;
-  color: #acacac;
-  margin-bottom: 20px;
-}
-
-.student-info {
-  display: flex;
-  align-items: center; /* Align image and text vertically in the center */
-  gap: 15px; /* Space between the image and the text */
-}
-
-.student-info img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* Make the image circular */
-}
-
-.student-info h4 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #050C26;
-  margin: 0; /* Remove default margin */
-}
-
-.student-info span {
-  font-size: 14px;
-  color: #777;
-  margin: 0; /* Remove default margin */
-  display: block;
-}
-
-/* Pagination Dots */
-.pagination {
-  margin-top: 20px;
-}
-
-.pagination .dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.pagination .dot.active {
-  background-color: #4D2C5E;
-}
-
-.pagination .dot:hover {
-  background-color: #4D2C5E;
-}
-
-/* Subscription Section Styling */
-.subscription-section {
-  width: 100%;
-  padding: 30px 0;
-  background-color: #4D2C5E;
-  border-radius: 12px;
-  position: relative;
-  z-index: 1; /* Ensure the subscription section is above */
-  margin-bottom: 40px; /* Add margin to avoid overlap with the next section */
-}
-
-.subscription-bg {
-  width: 100%;
-  height: 300px;
-  background: #4D2C5E;
-  border-radius: 12px;
-  position: absolute;
-  top: 0;
-
-  margin: 0 20px;
-  left: 0;
-}
-
-.subscription-text {
-  width: 400px;
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  text-align: center;
-}
-
-.circle {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.left-circle {
-  left: -25px;
-  top: -45px;
-}
-
-.right-circle {
-  left: calc(100% - 25px);
-  top: -50px;
-  transform: rotate(90deg);
-}
-
-.small-left-circle {
-  left: 10px;
-  top: -80px;
-}
-
-.small-right-circle {
-  left: calc(100% - 10px);
-  top: -12px;
-  transform: rotate(90deg);
-}
-
-/* Content Inside the Subscription Section */
-/* Content Inside the Subscription Section */
-.subscription-content {
-  width: 100%;
-  max-width: 450px;  /* Limit the maximum width for content */
-  margin: 0 20px;  /* Add margins on left and right */
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-}
-
-.subscription-title {
-  font-size: 30px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  line-height: 44px;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.subscription-input {
-  position: relative;
-  width: 450px;
-  margin: 0 auto;
-}
-
-.email-input {
-  width: 100%;
-  height: 60px;
-  background: white;
-  border: none;
-  border-radius: 50px;
-  padding: 0 30px;
-  font-size: 16px;
-  color: #ACACAC;
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
-  outline: none;
-}
-
-.send-btn {
-  position: absolute;
-  right: 0;
-  top: 7px;
-  width: 150px;
-  height: 50px;
-  background: #FF7426;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-}
-
-.send-btn:hover {
-  background-color: #e5671e;
-}
-
-/* Ensure that sections following the subscription have enough margin */
-.content {
-  margin-top: 50px; /* Adjust margin to avoid overlap */
-}
-
-
-/* Drag and Drop Practice Page */
-
-/* Container for Drag-and-Drop Practice */
-.drag-container {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  background-color: #F5F5F5;
-  border-radius: 15px;
-}
-
-/* Left Section with Question Numbers */
-.left-section {
-  flex: 1;
-  margin-right: 20px;
-  padding: 10px;
-  background-color: #FFF;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.left-section h2 {
-  text-align: center;
-  color: #4D2C5E;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* Question List Styling */
-.question-list {
-  list-style-type: none;
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-.question-item {
-  padding: 12px 20px;
-  margin: 8px;
-  background-color: #4D2C5E;
-  border-radius: 10px;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.question-item:hover {
-  background-color: #FF7426;
-  transform: translateY(-4px);
-}
-
-/* Active state for the current question */
-.question-item.active {
-  background-color: #ED9231;
-}
-
-/* Right Section with Code Blocks */
-.right-section {
-  flex: 2;
-  background-color: #FFF;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.right-section h2{
-  text-align: center;
-  color: #4D2C5E;
-  font-size: 24px;
-}
-
-.code-blocks {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-.block {
-  width: 200px;
-  padding: 15px;
-  border: 2px solid #4D2C5E;
-  margin: 10px;
-  background-color: #FDF8EE;
-  cursor: grab;
-  text-align: center;
-  border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.block:hover {
-  background-color: #ED9231;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.drop-zone {
-  width: 100%;
-  border: 2px dashed #4D2C5E;
-  min-height: 200px;
-  margin: 20px 0;
-  background-color: #F0F0F5;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.drop-zone p {
-  font-size: 18px;
-  font-weight: bold;
-  color: #4D2C5E;
-}
-
-.submit-btn {
-  padding: 12px 25px;
-  background-color: #FF7426;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-  background-color: #e5671e;
-}
-
-.feedback {
-  font-size: 20px;
-  font-weight: bold;
-  color: #4D2C5E;
-  margin-top: 20px;
-}
-
-/* Responsive Design for Drag-and-Drop Page */
-@media screen and (max-width: 768px) {
-  .drag-container {
-      flex-direction: column;
+  /* Other sections */
+  .testimonial {
+    width: 100%;
   }
 
-  .right-section {
-      margin-top: 20px;
-  }
-}
-
-
-
-/* Course Page Styles */
-
-/* Course Container */
-.course-container {
-  width: 80%;
-  margin: 40px auto; /* Add margin to top/bottom and auto for centering left/right */
-  background-color: #FDF8EE; /* Matches the main background */
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #4D2C5E; /* Added border with color #4D2C5E */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Course Header */
-.course-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-}
-
-.course-header h1 {
-  font-size: 28px;
-  font-family: 'Roboto', sans-serif;
-  color: #4D2C5E;
-}
-
-.badge-popular {
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  border-radius: 15px;
-}
-
-/* Video Section */
-/* Video Section */
-.video-section {
-  position: relative;
-  margin-top: 30px; /* Add more space at the top */
-  text-align: center; /* Center-align the video section */
-}
-
-.video-section img {
-  width: 100%; /* Set width to full for larger screens */
-  max-width: 800px; /* Limit the maximum width */
-  border-radius: 12px; /* Slightly round corners */
-  margin: 0 auto;
-  filter: brightness(0.7); /* Adjust brightness for softer appearance */
-  transition: filter 0.3s ease;
-}
-
-.video-section img:hover {
-  filter: brightness(0.85); /* Lighten slightly on hover */
-}
-
-.video-section .play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Roboto', sans-serif;
-  font-size: 60px; /* Increase size for clarity */
-  color: #FF7426;
-  background-color: rgba(255, 255, 255, 0.85); /* Softer background */
-  padding: 25px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.video-section .play-btn:hover {
-  background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
-  transform: scale(1.1); /* Scale up slightly for interaction feedback */
-}
-
-/* Course Info Section */
-.course-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 30px;
-  padding: 0 20px; /* Add padding to ensure text doesn't touch edges */
-  flex-wrap: wrap; /* Ensure layout adapts to smaller screens */
-}
-
-.course-info .details {
-  flex: 1;
-  margin-right: 20px; /* Space between details and price/enroll section */
-}
-
-.course-info .details ul li {
-  margin-bottom: 12px; /* Increase spacing for readability */
-  font-size: 18px; /* Increase font size */
-}
-
-.price-enroll {
-  text-align: center;
-}
-
-.price-enroll .price-tag {
-  background-color: #ED6A5A; /* Softer red tone */
-  padding: 8px 15px;
-  font-size: 16px;
-  border-radius: 12px; /* Less rounded for a modern look */
-}
-
-.price-enroll .enroll-btn {
-  background-color: #4D2C5E;
-  color: white;
-  padding: 12px 25px; /* Increase padding */
-  font-size: 18px;
-  border-radius: 25px;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.price-enroll .enroll-btn:hover {
-  background-color: #FF7426;
-}
-
-/* Lessons Section */
-.lessons-section {
-  margin-top: 40px;
-  padding: 0 20px; /* Add padding for consistent spacing */
-}
-
-.lessons-section h3 {
-  font-size: 24px;
-  color: #4D2C5E;
-}
-
-.lesson-item {
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: #FDF8EE; /* Match page background */
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Softer shadow */
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.lesson-item:hover {
-  background-color: #F0F0F5; /* Light background change on hover */
-  transform: translateY(-5px);
-}
-
-/* Review Section */
-.review-section {
-  margin-top: 50px;
-  padding: 0 20px;
-}
-
-.review-section h3 {
-  font-size: 24px;
-  color: #4D2C5E;
-}
-
-.review-section textarea {
-  width: 100%;
-  padding: 15px;
-  font-size: 16px;
-  border: 2px solid #4D2C5E; /* Bolder border for focus */
-  border-radius: 8px;
-  transition: border-color 0.3s ease;
-}
-
-.review-section textarea:focus {
-  border-color: #FF7426; /* Change border color on focus */
-}
-
-.review-section .write-review-btn {
-  background-color: #4D2C5E;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 16px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.review-section .write-review-btn:hover {
-  background-color: #FF7426;
-}
-
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .course-container {
-      width: 95%;
-      padding: 15px;
+  .testimonial-section {
+    padding: 15px;
   }
 
   .course-info {
-      flex-direction: column;
-      text-align: center;
+    padding: 15px;
   }
 
-  .enroll-btn {
-      margin-top: 15px;
+  .profile-card {
+    width: 95%;
+  }
+
+  .drag-container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    margin-top: 20px;
   }
 }
