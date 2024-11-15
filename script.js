@@ -258,7 +258,6 @@ const submitScore = async () => {
     }
 };
 
-// Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     initDragAndDrop();
     showQuestion(1);
@@ -277,18 +276,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Add event listener to submit score button
-    const submitScoreButton = document.getElementById('submitScore');
-    if (submitScoreButton) {
-        submitScoreButton.addEventListener('click', submitScore);
-    }
+    // Add event listeners to all save score buttons
+    document.querySelectorAll('.save-score-btn').forEach(button => {
+        button.addEventListener('click', submitScore);
+    });
 
     // Add event listeners to submit buttons for each question
     document.querySelectorAll('.submit').forEach((button, index) => {
         button.addEventListener('click', () => checkAnswer(index + 1));
     });
 });
-
 
 
 
@@ -498,10 +495,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Add event listener to button
-        const submitScoreButton = document.getElementById('submitScore');
-        if (submitScoreButton) {
-            submitScoreButton.addEventListener('click', submitScore);
-        }
+        // const submitScoreButton = document.getElementById('submitScore');
+        // if (submitScoreButton) {
+        //     submitScoreButton.addEventListener('click', submitScore);
+        // }
 
     }
 

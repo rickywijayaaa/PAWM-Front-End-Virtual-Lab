@@ -890,6 +890,18 @@
     transition: background-color 0.3s ease;
   }
 
+  .save-score-btn {
+    padding: 12px 25px;
+    background-color: #FF7426;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+
   .submit-btn:hover {
     background-color: #e5671e;
   }
