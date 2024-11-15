@@ -1,77 +1,135 @@
+<!-- practice.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Practice - Drag and Drop</title>
-    <link rel="stylesheet" href="../styled.css">
+    <title>Python Practice - Virtual Lab</title>
+    <link rel="stylesheet" href="/styled.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="header">
-            <div class="navbar">
-                <div class="logo"><a href="#">LetsCoding</a></div>
-                <div class="nav-item"><a href="../homepage.html">Home</a></div>
-                <div class="nav-item"><a href="project.html">Project</a></div>
-                <div class="nav-item"><a href="course.html">Courses</a></div>
-                <div class="nav-item"><a href="practice.html">Practice</a></div>
-                <div class="nav-item sign-in"><a href="profile.html">Profile</a></div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">LetsCoding</a>
             </div>
-        </div>
+            <div class="nav-item">
+                <a href="../homepage.html">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="project.html">Project</a>
+            </div>
+            <div class="nav-item">
+                <a href="course.html">Courses</a>
+            </div
+            <div class="nav-item">
+                <a href="practice.html">Practice</a>
+            </div>
+            <div class="nav-item sign-in">
+                <a href="login.html" id="signInLink">Sign in</a>
+            </div>
+            <div class="nav-item" id="logoutLink" style="display: none;">
+                <a href="#" id="logoutButton">Logout</a>
+            </div>
+            <div class="nav-item sign-in" id="profileLink" style="display: none;">
+                <a href="profile.html">Profile</a>
+            </div>
+        </nav>
+    </header>
 
+    <div class="main-container">
         <div class="content">
             <h1>Python Basic Practice</h1>
         </div>
 
         <div class="drag-container">
-            <!-- Left Section with Question Numbers -->
             <div class="left-section">
                 <h2>Question Numbers</h2>
-                <ul class="question-list">
-                    <li class="question-item active">1</li>
-                    <li class="question-item">2</li>
-                    <li class="question-item">3</li>
-                    <li class="question-item">4</li>
-                    <li class="question-item">5</li>
-                    <li class="question-item">6</li>
-                    <li class="question-item">7</li>
-                    <li class="question-item">8</li>
-                    <li class="question-item">9</li>
-                    <li class="question-item">10</li>
-                </ul>                
+                <div class="question-list">
+                    <div class="question-item active" onclick="showQuestion(1)">1</div>
+                    <div class="question-item" onclick="showQuestion(2)">2</div>
+                    <div class="question-item" onclick="showQuestion(3)">3</div>
+                    <div class="question-item" onclick="showQuestion(4)">4</div>
+                </div>
             </div>
 
-            <!-- Right Section with Drag and Drop Code Blocks -->
             <div class="right-section">
-                <h2>Arrange the code with correct order</h2>
-                <div class="code-blocks" id="codeBlocks">
-                    <div class="block" draggable="true" id="line1"> else: </div>
-                    <div class="block" draggable="true" id="line2">    if (x % 2 == 0) : </div>
-                    <div class="block" draggable="true" id="line3">def evenOdd():</div>
-                    <div class="block" draggable="true" id="line4">    print "even"</div>
-                    <div class="block" draggable="true" id="line5">    print "odd"</div>
+                <h2>Arrange the code in correct order</h2>
+
+                <div id="question1" class="question">
+                    <div id="codeBlocks1" class="code-blocks">
+                        <div class="block" draggable="true">def evenOdd():</div>
+                        <div class="block" draggable="true">if (x % 2 == 0):</div>
+                        <div class="block" draggable="true">print("even")</div>
+                        <div class="block" draggable="true">else:</div>
+                        <div class="block" draggable="true">print("odd")</div>
+                    </div>
+                    <div id="dropzone1" class="drop-zone">
+                        Drop the code blocks here in the correct order
+                    </div>
+                    <button class="submit-btn" onclick="checkAnswer(1)">Submit</button>
+                    <button id="submitScore" class="submit-btn">Save Score</button>
                 </div>
 
-                <div class="drop-zone" id="dropzone">
-                    <p>Drop the code blocks here in the correct order</p>
+
+                <!-- Question 2 -->
+                <div id="question2" class="question" style="display: none;">
+                    <div id="codeBlocks2" class="code-blocks">
+                        <div class="block" draggable="true">def greet():</div>
+                        <div class="block" draggable="true">print("Hello, world!")</div>
+                        <div class="block" draggable="true">greet()</div>
+                    </div>
+                    <div id="dropzone2" class="drop-zone">
+                        <p>Drop the code blocks here in the correct order</p>
+                    </div>
+                    <button class="submit-btn" onclick="checkAnswer(2)">Submit</button>
+                    <button id="submitScore" class="submit-btn">Save Score</button>
+                </div>
+                <div id="question3" class="question" style="display: none;">
+                    <div id="codeBlocks3" class="code-blocks">
+                        <div class="block" draggable="true">x = 5</div>
+                        <div class="block" draggable="true">if x > 3:</div>
+                        <div class="block" draggable="true">print("x is greater than 3")</div>
+                    </div>
+                    <div id="dropzone3" class="drop-zone">
+                        <p>Drop the code blocks here in the correct order</p>
+                    </div>
+                    <button class="submit-btn" onclick="checkAnswer(3)">Submit</button>
+                    <button id="submitScore" class="submit-btn">Save Score</button>
+                </div>
+                <div id="question4" class="question" style="display: none;">
+                    <div id="codeBlocks4" class="code-blocks">
+                        <div class="block" draggable="true">for i in range(3):</div>
+                        <div class="block" draggable="true">print(i)</div>
+                    </div>
+                    <div id="dropzone4" class="drop-zone">
+                        <p>Drop the code blocks here in the correct order</p>
+                    </div>
+                    <button class="submit-btn" onclick="checkAnswer(4)">Submit</button>
+                    <button id="submitScore" class="submit-btn">Save Score</button>
                 </div>
 
-                <button class="submit-btn" onclick="checkOrder()">Submit</button>
                 <div id="feedback" class="feedback"></div>
             </div>
         </div>
-
-        <div class="footer">
-            <div class="footer-links">
-                <a href="../homepage.html">Home</a>
-                <a href="practice.html">Practice</a>
-                <a href="course.html">Courses</a>
-                <a href="project.html">Project</a>
-                <a href="profile.html">Profile</a>
-            </div>
-            <p>&copy; 2024 LetsCoding. All Rights Reserved.</p>
-        </div>    
     </div>
-    <script src="../script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../homepage.html">Home</a>
+            <a href="practice.html">Practice</a>
+            <a href="course.html">Courses</a>
+            <a href="project.html">Project</a>
+        </div>
+        © 2024 LetsCoding. All Rights Reserved.
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js"></script>
+    
+    <!-- Custom Script -->
+    <script type="module" src="../script.js"></script>
 </body>
 </html>

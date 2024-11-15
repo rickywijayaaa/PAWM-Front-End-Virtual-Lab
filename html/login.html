@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LetsCoding</title>
+    
+    <!-- Import Firebase SDK before your script -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth-compat.js"></script>
+    
+    <!-- Add your CSS file -->
+    <link rel="stylesheet" href="../styled.css">
+    
+    <!-- Add type="module" to your script tag -->
+    <script type="module" src="/script.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#">LetsCoding</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../homepage.html">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="project.html">Project</a>
+                </div>
+                <div class="nav-item">
+                    <a href="course.html">Courses</a>
+                </div>
+                <div class="nav-item">
+                    <a href="practice.html">Practice</a>
+                </div>
+                <div class="nav-item sign-in">
+                    <a href="login.html" id="signInLink">Sign in</a>
+                </div>
+                <div class="nav-item" id="logoutLink" style="display: none;">
+                    <a href="#" id="logoutButton">Logout</a>
+                </div>
+                <div class="nav-item sign-in" id="profileLink" style="display: none;">
+                    <a href="profile.html">Profile</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sign In Card -->
+        <div class="login-card" id="loginCard">
+            <h1>Sign In</h1>
+            <form id="signin-form">
+                <div class="form-group">
+                    <label for="signin-email">Email:</label>
+                    <input type="email" id="signin-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signin-password">Password:</label>
+                    <input type="password" id="signin-password" required>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="javascript:void(0)" id="showSignUpLink" aria-label="Go to sign up form">Sign Up</a></p>
+        </div>
+
+        <!-- Sign Up Card -->
+        <div class="signup-card" id="signupCard" style="display: none;">
+            <h1>Sign Up</h1>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" required 
+                           placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signup-nim">NIM:</label>
+                    <input type="text" id="signup-nim" required 
+                           placeholder="Enter your NIM">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" required 
+                           placeholder="Create a password"
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                           title="Password must be at least 8 characters long and include both letters and numbers">
+                </div>
+                <button type="submit" class="login-btn">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="javascript:void(0)" id="showSignInLink" aria-label="Return to sign in form">Sign In</a></p>
+        </div>
+        
+    </div>
+
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error Message Container -->
+    <div id="error-message" class="error-message" style="display: none;"></div>
+
+    
+</body>
+</html>

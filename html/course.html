@@ -15,7 +15,15 @@
                 <div class="nav-item"><a href="project.html">Project</a></div>
                 <div class="nav-item"><a href="course.html">Courses</a></div>
                 <div class="nav-item"><a href="practice.html">Practice</a></div>
-                <div class="nav-item sign-in"><a href="profile.html">Profile</a></div>
+                <div class="nav-item sign-in">
+                    <a href="login.html" id="signInLink">Sign in</a>
+                </div>
+                <div class="nav-item" id="logoutLink" style="display: none;">
+                    <a href="#" id="logoutButton">Logout</a>
+                </div>
+                <div class="nav-item sign-in" id="profileLink" style="display: none;">
+                    <a href="profile.html">Profile</a>
+                </div>
             </div>
         </div>
 
@@ -86,6 +94,6 @@
         </div>    
     </div>
 
-    <script src="../script.js"></script>
+    <script src="../script.js" type="module"></script>
 </body>
 </html>

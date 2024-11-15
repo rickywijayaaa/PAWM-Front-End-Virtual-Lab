@@ -1296,6 +1296,178 @@
     margin-top: 20px;
   }
 }
+  /* Login Card */
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto; /* Center the card */
+    background-color: #FDF8EE; /* Match the overall theme background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+  }
+  
+  .login-card h1 {
+    font-size: 32px;
+    color: #4D2C5E; /* Primary color for title */
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels and inputs to the left */
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 16px;
+    color: #4D2C5E;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #CCC;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #FF7426;
+    outline: none;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background-color: #4D2C5E; /* Primary button color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #FF7426;
+  }
+  
+  .login-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .login-card a {
+    color: #4D2C5E;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .login-card a:hover {
+    color: #FF7426;
+  }
+  
+/* Login and Signup Card */
+.login-card, .signup-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto; /* Center the card */
+  background-color: #FDF8EE; /* Match the overall theme background */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
+
+.login-card h1, .signup-card h1 {
+  font-size: 32px;
+  color: #4D2C5E; /* Primary color for title */
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #4D2C5E;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #FF7426;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  color: white;
+  background-color: #4D2C5E; /* Primary button color */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #FF7426;
+}
+
+.login-card p, .signup-card p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.login-card a, .signup-card a {
+  color: #4D2C5E;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.login-card a:hover, .signup-card a:hover {
+  color: #FF7426;
+}
+
+.form-group input.invalid {
+  border-color: #FF7426;
+  background-color: #fff0eb;
+}
+
+.form-group input.invalid:focus {
+  box-shadow: 0 0 0 2px rgba(255, 116, 38, 0.2);
+}
+
+
+
+
 
 /* Mobile devices (480px and below) */
 @media screen and (max-width: 480px) {
@@ -1365,4 +1537,87 @@
   .right-section {
     margin-top: 20px;
   }
+}
+
+/* Success Popup Styling */
+.success-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  transform: translateX(150%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.success-popup.show {
+  transform: translateX(0);
+}
+
+.success-content {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.success-icon {
+  background-color: white;
+  color: #4CAF50;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.success-message {
+  font-size: 16px;
+}
+
+
+/* Failure Popup Styling */
+.failure-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  transform: translateX(150%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.failure-popup.show {
+  transform: translateX(0);
+}
+
+.failure-content {
+  background-color: #f44336; /* Red background for failure */
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.failure-icon {
+  background-color: white;
+  color: #f44336;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.failure-message {
+  font-size: 16px;
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Project Dashboard</title>
     <link rel="stylesheet" href="../styled.css">
+    <script type="module" src="/script.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -17,7 +18,15 @@
                 <div class="nav-item"><a href="project.html">Projects</a></div>
                 <div class="nav-item"><a href="course.html">Courses</a></div>
                 <div class="nav-item"><a href="practice.html">Practice</a></div>
-                <div class="nav-item sign-in"><a href="profile.html">Profile</a></div>
+                <div class="nav-item sign-in">
+                    <a href="login.html" id="signInLink">Sign in</a>
+                </div>
+                <div class="nav-item" id="logoutLink" style="display: none;">
+                    <a href="#" id="logoutButton">Logout</a>
+                </div>
+                <div class="nav-item sign-in" id="profileLink" style="display: none;">
+                    <a href="profile.html">Profile</a>
+                </div>
             </div>
         </div>
 
